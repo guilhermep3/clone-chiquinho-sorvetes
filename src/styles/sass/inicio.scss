@@ -1,0 +1,85 @@
+@use "variables";
+@use "mixins";
+
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 400px;
+
+  #hero-video {
+    object-fit: cover;
+  }
+}
+.bg-dark {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #00000088;
+}
+
+.controls-hero {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  right: 2%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    color: variables.$brown;
+    font-size: 56px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transform: scaleY(2.0);
+    transition: all 0.2s;
+
+    &:hover{
+      color: variables.$red;
+    }
+
+    &#prev-btn {
+      filter: drop-shadow(4px 0px 4px #00000088);
+    }
+
+    &#next-btn {
+      filter: drop-shadow(-4px 0px 4px #00000088);
+    }
+  }
+}
+
+.quick-access {
+  position: fixed;
+  bottom: 0;
+  right: 2%;
+  z-index: 10;
+  @include mixins.flexCenter();
+  align-items: flex-end;
+
+  .franqueado {
+    background-color: variables.$brown;
+    padding: 8px 24px;
+    color: #ffffff;
+    border-top-left-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .quick-social-medias {
+    background-color: variables.$cream;
+    padding: 6px 12px;
+    border-top-right-radius: 8px;
+    @include mixins.flexCenter();
+    gap: 8px;
+    border: 1px solid #00000088;
+
+    i {
+      font-size: 20px;
+      color: variables.$brown;
+      cursor: pointer;
+    }
+  }
+}

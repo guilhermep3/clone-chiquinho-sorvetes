@@ -1,3 +1,5 @@
+@use "variables";
+
 @mixin container(){
   max-width: 1300px;
   width: 100%;
@@ -16,9 +18,37 @@
   justify-content: center;
   align-items: center;
 }
-
+@mixin flexColCenter(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 @mixin flexBetween(){
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@mixin buttonRed(){
+  font-size: 16px;
+  padding: 8px 20px;
+  background-color: variables.$red;
+  color: #ffffff;
+  border-radius: 8px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Onest", sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  @include mobile(){
+    font-size: 14px;
+    padding: 6px 16px;
+  }
+
+  &:hover{
+    background-color: #8f1018;
+  }
 }

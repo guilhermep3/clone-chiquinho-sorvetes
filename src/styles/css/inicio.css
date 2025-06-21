@@ -1,0 +1,81 @@
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 400px;
+}
+#hero #hero-video {
+  object-fit: cover;
+}
+
+.bg-dark {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5333333333);
+}
+
+.controls-hero {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  right: 2%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.controls-hero button {
+  color: #4D2B1A;
+  font-size: 56px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transform: scaleY(2);
+  transition: all 0.2s;
+}
+.controls-hero button:hover {
+  color: #A8151F;
+}
+.controls-hero button#prev-btn {
+  filter: drop-shadow(4px 0px 4px rgba(0, 0, 0, 0.5333333333));
+}
+.controls-hero button#next-btn {
+  filter: drop-shadow(-4px 0px 4px rgba(0, 0, 0, 0.5333333333));
+}
+
+.quick-access {
+  position: fixed;
+  bottom: 0;
+  right: 2%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-end;
+}
+.quick-access .franqueado {
+  background-color: #4D2B1A;
+  padding: 8px 24px;
+  color: #ffffff;
+  border-top-left-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.quick-access .quick-social-medias {
+  background-color: #fcf1d3;
+  padding: 6px 12px;
+  border-top-right-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.5333333333);
+}
+.quick-access .quick-social-medias i {
+  font-size: 20px;
+  color: #4D2B1A;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=inicio.css.map */

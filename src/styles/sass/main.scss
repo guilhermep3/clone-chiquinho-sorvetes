@@ -1,4 +1,5 @@
-@import "mixins";
+@use "mixins";
+@use "variables";
 
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 
@@ -12,4 +13,97 @@ html{
 }
 body{
   font-family: "Onest", sans-serif;
+  position: relative;
+}
+
+.container{
+  @include mixins.container();
+}
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  transition: all 0.5s ease-in-out;
+  z-index: 20;
+}
+header.active{
+  background-color: variables.$cream;
+
+  .bars-mobile i{
+    color: #000000;
+  }
+  .header-container{
+    padding: 12px;
+  }
+  .link-header{
+    color: variables.$brown;
+  }
+  .link-header:hover{
+    color: variables.$red;
+  }
+  .link-header.active{
+    color: variables.$red
+  }
+}
+.header-container{
+  @include mixins.flexBetween();
+  gap: 20px;
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  transition: all 0.5s ease-in-out;
+}
+.bars-mobile{
+  display: none;
+
+  i{
+    font-size: 24px;
+    color: #ffffff;
+  }
+
+  @include mixins.mobile(){
+    display: block;
+  }
+}
+.logo-header{
+  width: 400px;
+
+  img{
+    width: 100%;
+  }
+}
+.header-content{
+
+  nav{
+    @include mixins.mobile(){
+      display: none;
+    }
+  }
+  nav ul{
+    @include mixins.flexCenter();
+    gap: 32px;
+    list-style: none;
+  }
+  .link-header{
+    text-decoration: none;
+    color: #dfdfdf;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.2s;
+  }
+  .link-header:hover{
+    color: #ffffff;
+  }
+  .link-header.active{
+    color: #ffffff
+  }
+  @include mixins.flexCenter();
+  gap: 44px;
+
+  button{
+    @include mixins.buttonRed();
+  }
 }

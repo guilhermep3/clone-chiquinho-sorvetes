@@ -5,14 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sorveteria - Clone Chiquinho</title>
   <link rel="stylesheet" href="src/styles/css/main.css">
+  <link rel="stylesheet" href="src/styles/css/inicio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
 <body>
   <header>
-
+    <div class="header-container">
+      <div class="bars-mobile">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="logo-header">
+        <img src="src/images/chiquinho-logo-horizontal.png.webp" alt="logo sorveteria">
+      </div>
+      <div class="header-content">
+        <nav>
+          <ul>
+            <li><a href="/" class="link-header active">Início</a></li>
+            <li><a href="/cardapio" class="link-header">Cardápio</a></li>
+            <li><a href="/historia" class="link-header">Nossa História</a></li>
+          </ul>
+        </nav>
+        <button class="button">Peça aqui</button>
+      </div>
+    </div>
   </header>
   <main>
+    <div class="quick-access">
+      <a href="#" class="franqueado">Seja um franqueado</a>
+      <div class="quick-social-medias">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+    </div>
     <section id="hero">
-      
+      <div class="bg-dark"></div>
+      <video id="hero-video" autoplay muted loop width="100%" height="100%"></video>
+      <div class="controls-hero">
+        <button id="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+        <button id="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
     </section>
     <section id="presentation">
 
@@ -30,5 +62,6 @@
   <footer>
 
   </footer>
+  <script src="src/js/main.js"></script>
 </body>
 </html>

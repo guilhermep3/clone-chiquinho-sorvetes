@@ -11,6 +11,129 @@ html {
 
 body {
   font-family: "Onest", sans-serif;
+  position: relative;
+}
+
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  transition: all 0.5s ease-in-out;
+  z-index: 20;
+}
+
+header.active {
+  background-color: #fcf1d3;
+}
+header.active .bars-mobile i {
+  color: #000000;
+}
+header.active .header-container {
+  padding: 12px;
+}
+header.active .link-header {
+  color: #4D2B1A;
+}
+header.active .link-header:hover {
+  color: #A8151F;
+}
+header.active .link-header.active {
+  color: #A8151F;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.bars-mobile {
+  display: none;
+}
+.bars-mobile i {
+  font-size: 24px;
+  color: #ffffff;
+}
+@media (max-width: 768px) {
+  .bars-mobile {
+    display: block;
+  }
+}
+
+.logo-header {
+  width: 400px;
+}
+.logo-header img {
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 44px;
+}
+@media (max-width: 768px) {
+  .header-content nav {
+    display: none;
+  }
+}
+.header-content nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+.header-content .link-header {
+  text-decoration: none;
+  color: #dfdfdf;
+  font-weight: bold;
+  font-size: 18px;
+  transition: all 0.2s;
+}
+.header-content .link-header:hover {
+  color: #ffffff;
+}
+.header-content .link-header.active {
+  color: #ffffff;
+}
+.header-content button {
+  font-size: 16px;
+  padding: 8px 20px;
+  background-color: #A8151F;
+  color: #ffffff;
+  border-radius: 8px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Onest", sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+@media (max-width: 768px) {
+  .header-content button {
+    font-size: 14px;
+    padding: 6px 16px;
+  }
+}
+.header-content button:hover {
+  background-color: #8f1018;
 }
 
 /*# sourceMappingURL=main.css.map */
