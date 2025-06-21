@@ -4,7 +4,11 @@
   max-width: 1300px;
   width: 100%;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 120px 20px;
+
+  @include mobile(){
+    padding: 40px 16px;
+  }
 }
 
 @mixin mobile(){

@@ -2,7 +2,6 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  margin-bottom: 400px;
 }
 #hero #hero-video {
   object-fit: cover;
@@ -76,6 +75,144 @@
   font-size: 20px;
   color: #4D2B1A;
   cursor: pointer;
+}
+
+#presentation .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  #presentation .container {
+    flex-direction: column;
+  }
+}
+
+.presentation-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  width: 40%;
+}
+@media (max-width: 768px) {
+  .presentation-left {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+.presentation-left h1 {
+  font-size: 40px;
+  font-weight: 900;
+  color: #4D2B1A;
+}
+@media (max-width: 768px) {
+  .presentation-left h1 {
+    font-size: 32px;
+  }
+}
+.presentation-left p {
+  color: #4D2B1A;
+}
+.presentation-left span {
+  color: #A8151F;
+  font-size: 12px;
+}
+.presentation-left span a {
+  color: #A8151F;
+  font-weight: bold;
+  text-decoration: none;
+}
+.presentation-left span a:hover {
+  text-decoration: underline;
+}
+
+.presentation-right {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .presentation-right {
+    width: 100%;
+  }
+}
+.presentation-right .images-presentation-area {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+@media (max-width: 768px) {
+  .presentation-right .images-presentation-area {
+    width: 240px;
+    height: 240px;
+  }
+}
+.presentation-right .images-presentation-area:hover #presentation_1 {
+  transform: translateX(-50%) rotate(180deg) scale(1.2);
+  top: -10%;
+}
+.presentation-right .images-presentation-area:hover #presentation_2 {
+  transform: rotate(-20deg) scale(1.3);
+}
+.presentation-right .images-presentation-area:hover #presentation_3 {
+  transform: rotate(-10deg) scale(1.15);
+}
+.presentation-right .images-presentation-area:hover #presentation_4 {
+  transform: rotate(10deg) scale(1.15);
+}
+.presentation-right .images-presentation-area:hover #presentation_5 {
+  transform: rotate(20deg) scale(1.2);
+}
+.presentation-right .images-presentation-area .red-ball {
+  position: relative;
+  background-color: #A8151F;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.presentation-right .images-presentation-area .red-ball img {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 80%;
+}
+.presentation-right .images-presentation-area img {
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+}
+@media (max-width: 768px) {
+  .presentation-right .images-presentation-area img {
+    width: 100px;
+  }
+}
+.presentation-right .images-presentation-area #presentation_2 {
+  top: 0;
+  left: -15%;
+  height: 90%;
+  transform: scale(1.1);
+}
+.presentation-right .images-presentation-area #presentation_3 {
+  top: 50%;
+  left: 6%;
+  height: 60%;
+  z-index: 2;
+}
+.presentation-right .images-presentation-area #presentation_4 {
+  top: 50%;
+  right: 6%;
+  height: 60%;
+  z-index: 2;
+}
+.presentation-right .images-presentation-area #presentation_5 {
+  top: 0;
+  right: -15%;
+  height: 90%;
 }
 
 /*# sourceMappingURL=inicio.css.map */

@@ -5,7 +5,6 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  margin-bottom: 400px;
 
   #hero-video {
     object-fit: cover;
@@ -80,6 +79,145 @@
       font-size: 20px;
       color: variables.$brown;
       cursor: pointer;
+    }
+  }
+}
+
+
+#presentation{
+
+  .container{
+    @include mixins.flexCenter();
+    @include mixins.mobile(){
+      flex-direction: column;
+    }
+  }
+}
+
+// .presentation-left, .presentation-right{
+//   flex: 1;
+// }
+.presentation-left{
+  @include mixins.flexCenter();
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  width: 40%;
+  @include mixins.mobile(){
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  h1{
+    font-size: 40px;
+    font-weight: 900;
+    color: variables.$brown;
+    @include mixins.mobile(){
+      font-size: 32px;
+    }
+
+  }
+  p{
+    color: variables.$brown;
+  }
+  span{
+    color: variables.$red;
+    font-size: 12px;
+
+    a{
+      color: variables.$red;
+      font-weight: bold;
+      text-decoration: none;
+      
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.presentation-right{
+  width: 60%;
+  @include mixins.flexCenter();
+  @include mixins.mobile(){
+    width: 100%;
+  }
+
+  .images-presentation-area{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    @include mixins.mobile(){
+      width: 240px;
+      height: 240px;
+    }
+
+    &:hover{
+
+      #presentation_1{
+        transform: translateX(-50%) rotate(180deg) scale(1.2);
+        top: -10%;
+      }
+      #presentation_2{
+        transform: rotate(-20deg) scale(1.3);
+      }
+      #presentation_3{
+        transform: rotate(-10deg) scale(1.15);
+      }
+      #presentation_4{
+        transform: rotate(10deg) scale(1.15);
+      }
+      #presentation_5{
+        transform: rotate(20deg) scale(1.2);
+      }
+    }
+    
+    .red-ball{
+      position: relative;
+      background-color: variables.$red;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img{
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 80%;
+      }
+    }
+
+    img{
+      position: absolute;
+      transition: all 0.5s ease-in-out;
+      @include mixins.mobile(){
+        width: 100px;
+      }
+    }
+    #presentation_2{
+      top: 0;
+      left: -15%;
+      height: 90%;
+      transform: scale(1.1);
+    }
+    #presentation_3{
+      top: 50%;
+      left: 6%;
+      height: 60%;
+      z-index: 2;
+    }
+    #presentation_4{
+      top: 50%;
+      right: 6%;
+      height: 60%;
+      z-index: 2;
+    }
+    #presentation_5{
+      top: 0;
+      right: -15%;
+      height: 90%;
     }
   }
 }
