@@ -29,6 +29,19 @@
       </div>
     </div>
   </header>
+  <aside class="mobile-aside-bg">
+    <div class="mobile-aside">
+      <div class="mobile-aside-top">
+        <img class="aside-logo" src="src/images/chiquinho-logo-horizontal.png.webp" alt="logo chiquinho sorvetes">
+        <button class="buttonRed">Peça aqui</button>
+      </div>
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/cardapio">Cardápio</a></li>
+        <li><a href="/historia">Nossa História</a></li>
+      </ul>
+    </div>
+  </aside>
   <main>
     <div class="quick-access">
       <a href="#" class="franqueado">Seja um franqueado</a>
@@ -50,7 +63,7 @@
       <div class="container">
         <div class="presentation-left">
           <h1>Com sua receita exclusiva, a Chiquinho apresenta um cardápio com mais de 100 opções</h1>
-          <p>Além de contar com parcerias de excelência e ingredientes selecionados, nossos carros-chefes 
+          <p>Além de contar com parcerias de excelência e ingredientes selecionados, nossos carros-chefes
             se destacam, como o Top Mix e o exclusivo Shake Mix®.
           </p>
           <span>Para mais informações, <a href="#">clique aqui</a> e confira a nossa tabela nutricional. </span>
@@ -70,23 +83,103 @@
     </section>
     <section id="products">
       <div class="container">
-
+        <h1 class="section-title">Conheça nossos produtos</h1>
+        <div class="our-products-area">
+          <a href="#" class="our-products-card milkshake-card">
+            <div class="our-products-images">
+              <img src="src/images/milkshake_1.webp" alt="milkshake_1">
+              <img id="milkshake_2" src="src/images/milkshake_2.webp" alt="milkshake_2">
+            </div>
+            <div class="our-products-card-text">
+              <p>Milk Shakes</p>
+              <span>Conheça +</span>
+            </div>
+          </a>
+          <a href="#" class="our-products-card casquinhas-card">
+            <div class="our-products-images">
+              <img src="src/images/casquinha_1.webp" alt="casquinha_1">
+              <img src="src/images/casquinha_2.webp" alt="casquinha_2">
+            </div>
+            <div class="our-products-card-text">
+              <p>Casquinhas & Cascões</p>
+              <span>Conheça +</span>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
     <section id="social-medias">
       <div class="container">
-        
+        <h1 class="section-title">Siga a gente nas redes sociais</h1>
+        <button class="button-icon">
+          Instagram
+          <i class="fa-brands fa-instagram"></i>
+        </button>
+        <div class="instagram-posts">
+          <!-- js -->
+        </div>
       </div>
     </section>
     <section id="begin">
       <div class="container">
-        
+        <div class="begin-images">
+          <img src="src/images/sobre-a-marca-primeira-chiquinho-01.png.webp" alt="sobre chiquinho sorvetes">
+          <img src="src/images/sobre-a-marca-primeira-chiquinho-02.png.webp" alt="sobre chiquinho sorvetes">
+        </div>
+        <div class="begin-texts">
+          <h1 class="section-title">Tudo começou no interior de Minas Gerais, quando Francisco, o Chiquinho, 
+            presenteou seu filho com uma pequena sorveteria.
+          </h1>
+          <p>O sonho era grande: espalhar felicidade em forma de sorvete. Em 2010, 
+            a Chiquinho entrou para o franchising e, hoje, com mais de 927 lojas pelo Brasil,
+            segue levando sorrisos a cada colherada.
+          </p>  
+          <a href="/historia" class="button-icon">
+            Saiba mais
+            <i class="fa-solid fa-heart"></i>
+          </a>
+        </div>
       </div>
     </section>
   </main>
   <footer>
-
+    <div class="container">
+      <div class="logo-footer">
+        <img src="src/images/chiquinho-logo-vertical.png.webp" alt="logo chiquinho sorvetes">
+      </div>
+      <div class="footer-div">
+        <p class="footer-title">MENU INSTITUCIONAL</p>
+        <ul>
+          <li><a href="/">Início</a></li>
+          <li><a href="/cardapio">Cardápio</a></li>
+          <li><a href="/historia">Nossa História</a></li>
+        </ul>
+      </div>
+      <div class="footer-div">
+        <p class="footer-title">CONTATOS</p>
+        <ul class="footer-contact-list">
+          <li>
+            <i class="fa-solid fa-phone-volume"></i>
+            +55 17 3211-8200
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            Entre em contato
+          </li>
+        </ul>
+        <div class="footer-social-medias">
+          <p>Acompanhe a gente nas redes sociais</p>
+          <div>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="developed">Desenvolvido por <a href="https://github.com/guilhermep3" target="_blank">Guilherme Pereira</a></p>
   </footer>
   <script src="src/js/main.js"></script>
+  <script src="src/js/inicio.js"></script>
 </body>
 </html>

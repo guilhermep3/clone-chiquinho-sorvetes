@@ -1,12 +1,13 @@
 const header = document.querySelector('header');
+const barsMobile = document.querySelector('.bars-mobile');
+const mobileAsideBg = document.querySelector('.mobile-aside-bg');
+const mobileAside = document.querySelector('.mobile-aside');
 
 const video = document.getElementById("hero-video");
 const videos = [
-  "src/videos/chiquinho-video-modo-turbo.mp4",
-  "src/videos/chiquinho-video-sensorial.mp4"
+  "src/videos/chiquinho-video-sensorial.mp4",
+  "src/videos/chiquinho-video-modo-turbo.mp4"
 ];
-
-window.addEventListener('scroll', checkScrollHeader);
 
 let currentVideoIndex = 0;
 
@@ -25,6 +26,8 @@ document.getElementById("next-btn").addEventListener("click", () => {
   loadVideo(currentVideoIndex);
 });
 
+loadVideo(currentVideoIndex);
+
 function checkScrollHeader() {
   if (window.scrollY > 0) {
     header.classList.add('active');
@@ -33,4 +36,14 @@ function checkScrollHeader() {
   };
 }
 
-loadVideo(currentVideoIndex);
+function handleShowAsideMobile(){
+  mobileAsideBg.classList.toggle('active')
+}
+function handleRemoveActive(){
+  mobileAsideBg.classList.remove('active')
+}
+
+window.addEventListener('scroll', checkScrollHeader);
+
+barsMobile.addEventListener('click', handleShowAsideMobile);
+mobileAsideBg.addEventListener('click', handleRemoveActive);

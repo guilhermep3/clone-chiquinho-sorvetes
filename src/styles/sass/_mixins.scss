@@ -7,7 +7,7 @@
   padding: 120px 20px;
 
   @include mobile(){
-    padding: 40px 16px;
+    padding: 64px 16px;
   }
 }
 
@@ -36,12 +36,11 @@
 
 @mixin buttonRed(){
   font-size: 16px;
-  padding: 8px 20px;
+  padding: 10px 20px;
   background-color: variables.$red;
   color: #ffffff;
   border-radius: 8px;
   border: none;
-  text-transform: uppercase;
   font-weight: bold;
   font-family: "Onest", sans-serif;
   cursor: pointer;
@@ -49,10 +48,50 @@
 
   @include mobile(){
     font-size: 14px;
-    padding: 6px 16px;
+    padding: 8px 16px;
   }
 
   &:hover{
-    background-color: #8f1018;
+    background-color: #8b0f17;
+  }
+}
+@mixin buttonYellow(){
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: variables.$yellow;
+  color: #ffffff;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  font-family: "Onest", sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  @include mobile(){
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  &:hover{
+    background-color: #d3910c;
+  }
+}
+@mixin buttonIcon(){
+  @include flexCenter();
+  gap: 8px;
+  width: 240px;
+  margin: 0 auto 64px auto;
+  transition: all 0.3s;
+
+  i{
+    visibility: hidden;
+    opacity: 0;
+    width: 0%;
+    transition: all 0.3s;
+  }
+  &:hover i{
+    opacity: 1;
+    width: 10%;
+    visibility: visible;
   }
 }

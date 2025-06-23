@@ -1,8 +1,7 @@
 @use "mixins";
 @use "variables";
 
-@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -12,13 +11,37 @@ html{
   scroll-behavior: smooth;
 }
 body{
-  font-family: "Onest", sans-serif;
+  font-family: "Fredoka", sans-serif;
   position: relative;
+  ::selection{
+    color: #ffffff;
+    background-color: variables.$red;
+  }
 }
 
 .container{
   @include mixins.container();
 }
+
+.section-title{
+  font-size: 44px;
+  font-weight: 900;
+  color: variables.$brown;
+  text-align: center;
+  margin-bottom: 40px;
+    
+  @include mixins.mobile(){
+    font-size: 32px;
+  }
+}
+
+.buttonRed{
+  @include mixins.buttonRed();
+}
+.buttonIcon{
+  @include mixins.buttonIcon();
+}
+
 header{
   position: fixed;
   top: 0;
@@ -105,5 +128,157 @@ header.active{
 
   button{
     @include mixins.buttonRed();
+  }
+}
+
+.mobile-aside-bg{
+  position: fixed;
+  inset: 0;
+  background-color: #00000088;
+  z-index: 21;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+  
+  &.active{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    
+    .mobile-aside{
+      transform: translateX(0%);
+    }
+  }
+  
+  .mobile-aside{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+    height: 100%;
+    background-color: #ffffff;
+    transform: translateX(-100%);
+    transition: all 0.3s ease-in-out;
+
+    .mobile-aside-top{
+      padding: 32px 24px;
+
+      .aside-logo{
+        width: 240px;
+        margin-bottom: 32px;
+      }
+    }
+    ul{
+      width: 100%;
+
+      li a{
+        color: #242424;
+        text-decoration: none;
+        padding: 16px 24px;
+        display: block;
+
+        &:hover{
+          background-color: #dfdfdf;
+        }
+      }
+    }
+  }
+}
+
+
+footer {
+
+  .container{
+    padding: 40px 16px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 40px;
+
+    @include mixins.mobile(){
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .footer-contact-list{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    i{
+      margin-right: 8px;
+    }
+  }
+
+  ul{
+    li{
+      color: #377899;
+      list-style: none;
+      font-size: 18px;
+      margin-bottom: 8px;
+      
+      a{
+        color: #377899;
+        text-decoration: none;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  i{
+    color: variables.$brown;
+  }
+}
+.logo-footer{
+  width: 200px;
+  height: 200px;
+
+  @include mixins.mobile(){
+    width: 120px;
+    height: 120px;
+  }
+
+  img{
+    width: inherit;
+  }
+}
+.footer-title{
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #377899;
+  margin-bottom: 20px;
+}
+.footer-social-medias{
+  p {
+    color: #377899;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+
+  div {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+
+    i{
+      font-size: 18px;
+    }
+  }
+}
+.developed{
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 14px;
+  color: variables.$brown;
+  
+  a{
+    color: variables.$brown;
+    font-weight: 500;
   }
 }
