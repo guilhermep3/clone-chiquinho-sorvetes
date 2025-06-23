@@ -336,7 +336,6 @@
   }
 
   a{
-    @include mixins.buttonRed();
     display: inline-block;
     text-decoration: none;
     margin-top: 24px;

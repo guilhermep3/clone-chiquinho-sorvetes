@@ -352,28 +352,9 @@
   font-size: 16px;
 }
 .begin-texts a {
-  font-size: 16px;
-  padding: 10px 20px;
-  background-color: #A8151F;
-  color: #ffffff;
-  border-radius: 8px;
-  border: none;
-  font-weight: bold;
-  font-family: "Onest", sans-serif;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
   display: inline-block;
   text-decoration: none;
   margin-top: 24px;
-}
-@media (max-width: 768px) {
-  .begin-texts a {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-}
-.begin-texts a:hover {
-  background-color: #8b0f17;
 }
 
 /*# sourceMappingURL=inicio.css.map */

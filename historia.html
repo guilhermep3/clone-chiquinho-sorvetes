@@ -8,9 +8,39 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
 <body>
-  <header>
-
+ <header>
+    <div class="header-container">
+      <a href="/" class="bars-mobile">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+      <div class="logo-header">
+        <img src="src/images/chiquinho-logo-horizontal.png.webp" alt="logo sorveteria">
+      </div>
+      <div class="header-content">
+        <nav>
+          <ul>
+            <li><a href="/" class="link-header">Início</a></li>
+            <li><a href="/cardapio.html" class="link-header active">Cardápio</a></li>
+            <li><a href="/historia" class="link-header">Nossa História</a></li>
+          </ul>
+        </nav>
+        <button class="buttonRed">Peça aqui</button>
+      </div>
+    </div>
   </header>
+  <aside class="mobile-aside-bg">
+    <div class="mobile-aside">
+      <div class="mobile-aside-top">
+        <img class="aside-logo" src="src/images/chiquinho-logo-horizontal.png.webp" alt="logo chiquinho sorvetes">
+        <button class="buttonRed">Peça aqui</button>
+      </div>
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/cardapio.html">Cardápio</a></li>
+        <li><a href="/historia">Nossa História</a></li>
+      </ul>
+    </div>
+  </aside>
   <main>
     <section id="hero">
       <div class="container">
@@ -48,8 +78,42 @@
       </div>
     </section>
   </main>
-  <footer>
-
+<footer>
+    <div class="container">
+      <div class="logo-footer">
+        <img src="src/images/chiquinho-logo-vertical.png.webp" alt="logo chiquinho sorvetes">
+      </div>
+      <div class="footer-div">
+        <p class="footer-title">MENU INSTITUCIONAL</p>
+        <ul>
+          <li><a href="/">Início</a></li>
+          <li><a href="cardapio.html">Cardápio</a></li>
+          <li><a href="historia.html">Nossa História</a></li>
+        </ul>
+      </div>
+      <div class="footer-div">
+        <p class="footer-title">CONTATOS</p>
+        <ul class="footer-contact-list">
+          <li>
+            <i class="fa-solid fa-phone-volume"></i>
+            +55 17 3211-8200
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            Entre em contato
+          </li>
+        </ul>
+        <div class="footer-social-medias">
+          <p>Acompanhe a gente nas redes sociais</p>
+          <div>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="developed">Desenvolvido por <a href="https://github.com/guilhermep3" target="_blank">Guilherme Pereira</a></p>
   </footer>
   <script src="src/js/main.js"></script>
 </body>
