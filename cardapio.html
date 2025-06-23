@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sorveteria - Clone Chiquinho</title>
+  <title>Sorveteria | Cardápio - Clone Chiquinho</title>
   <link rel="stylesheet" href="src/styles/css/main.css">
-  <link rel="stylesheet" href="src/styles/css/inicio.css">
+  <link rel="stylesheet" href="src/styles/css/cardapio.css">
   <link rel="stylesheet" href="src/styles/css/products.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
@@ -21,9 +21,9 @@
       <div class="header-content">
         <nav>
           <ul>
-            <li><a href="/" class="link-header active">Início</a></li>
-            <li><a href="cardapio.html" class="link-header">Cardápio</a></li>
-            <li><a href="historia.html" class="link-header">Nossa História</a></li>
+            <li><a href="/" class="link-header">Início</a></li>
+            <li><a href="/cardapio.html" class="link-header active">Cardápio</a></li>
+            <li><a href="/historia" class="link-header">Nossa História</a></li>
           </ul>
         </nav>
         <button class="buttonRed">Peça aqui</button>
@@ -39,48 +39,13 @@
       <ul>
         <li><a href="/">Início</a></li>
         <li><a href="/cardapio.html">Cardápio</a></li>
-        <li><a href="/historia.html">Nossa História</a></li>
+        <li><a href="/historia">Nossa História</a></li>
       </ul>
     </div>
   </aside>
   <main>
-    <div class="quick-access">
-      <a href="#" class="franqueado">Seja um franqueado</a>
-      <div class="quick-social-medias">
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-youtube"></i>
-      </div>
-    </div>
     <section id="hero">
-      <div class="bg-dark"></div>
-      <video id="hero-video" autoplay muted loop width="100%" height="100%"></video>
-      <div class="controls-hero">
-        <button id="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
-        <button id="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
-      </div>
-    </section>
-    <section id="presentation">
-      <div class="container">
-        <div class="presentation-left">
-          <h1>Com sua receita exclusiva, a Chiquinho apresenta um cardápio com mais de 100 opções</h1>
-          <p>Além de contar com parcerias de excelência e ingredientes selecionados, nossos carros-chefes
-            se destacam, como o Top Mix e o exclusivo Shake Mix®.
-          </p>
-          <span>Para mais informações, <a href="#">clique aqui</a> e confira a nossa tabela nutricional. </span>
-        </div>
-        <div class="presentation-right">
-          <div class="images-presentation-area">
-            <div class="red-ball">
-              <img id="presentation_1" src="src/images/presentation/presentation_1.webp" alt="sorvete">
-            </div>
-            <img id="presentation_2" src="src/images/presentation/presentation_2.webp" alt="sorvete">
-            <img id="presentation_3" src="src/images/presentation/presentation_3.webp" alt="sorvete">
-            <img id="presentation_4" src="src/images/presentation/presentation_4.webp" alt="sorvete">
-            <img id="presentation_5" src="src/images/presentation/presentation_5.webp" alt="sorvete">
-          </div>
-        </div>
-      </div>
+      <h1 class="hero-title">Cardápio</h1>
     </section>
     <section id="products">
       <div class="container">
@@ -109,36 +74,41 @@
         </div>
       </div>
     </section>
-    <section id="social-medias">
+    <section id="nutrition">
       <div class="container">
-        <h1 class="section-title">Siga a gente nas redes sociais</h1>
-        <button class="buttonIcon">
-          Instagram
-          <i class="fa-brands fa-instagram"></i>
-        </button>
-        <div class="instagram-posts">
-          <!-- js -->
+        <div class="nutrition-top">
+          <div class="nutrition-left">
+            <img src="src/images/ico-tabela-nutricional.png.webp" alt="tabela-nutricional">
+          </div>
+          <div class="nutrition-right">
+            <p>TABELA<br />NUTRICIONAL<br />GERAL</p>
+            <button class="buttonIcon buttonRed">
+              Ver Tabela Nutricional
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+          <div class="nutrition-top-mobile">
+            <div>
+              <img src="src/images/ico-tabela-nutricional.png.webp" alt="tabela-nutricional">
+              <p>TABELA<br />NUTRICIONAL<br />GERAL</p>
+            </div>
+            <button class="buttonIcon buttonRed">
+              Ver Tabela Nutricional
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
         </div>
-      </div>
-    </section>
-    <section id="begin">
-      <div class="container">
-        <div class="begin-images">
-          <img src="src/images/sobre-a-marca-primeira-chiquinho-01.png.webp" alt="sobre chiquinho sorvetes">
-          <img src="src/images/sobre-a-marca-primeira-chiquinho-02.png.webp" alt="sobre chiquinho sorvetes">
-        </div>
-        <div class="begin-texts">
-          <h1 class="section-title">Tudo começou no interior de Minas Gerais, quando Francisco, o Chiquinho, 
-            presenteou seu filho com uma pequena sorveteria.
-          </h1>
-          <p>O sonho era grande: espalhar felicidade em forma de sorvete. Em 2010, 
-            a Chiquinho entrou para o franchising e, hoje, com mais de 927 lojas pelo Brasil,
-            segue levando sorrisos a cada colherada.
-          </p>  
-          <a href="/historia" class="button-icon">
-            Saiba mais
-            <i class="fa-solid fa-heart"></i>
-          </a>
+        <div class="nutrition-bottom">
+          <p>
+            Os produtos expostos contêm glúten. Alérgicos: Devido ao contato entre ingredientes na área
+            de produção, há riscos de contaminação cruzada, em razão da transferência de contaminantes durante
+            a manipulação dos produtos. Para mais informações, consulte a tabela nutricional disponível abaixo.
+            NUTELLA® é uma marca de propriedade da Ferrero S.p.A. Ouro Branco® is a trademark of the Mondelēz
+            International Group used with permission. KitKat®, Suflair®, NEGRESCO® e Leite Moça® são marcas
+            registradas Nestlé. OVOMALTINE® é uma marca registrada da R. Twining and Company Limited. Previna
+            a obesidade infantil com a adoção de alimentação saudável e prática de atividades físicas. Imagens
+            meramente ilustrativas.
+          </p>
         </div>
       </div>
     </section>
@@ -178,9 +148,9 @@
         </div>
       </div>
     </div>
-    <p class="developed">Desenvolvido por <a href="https://github.com/guilhermep3" target="_blank">Guilherme Pereira</a></p>
+    <p class="developed">Desenvolvido por <a href="https://github.com/guilhermep3" target="_blank">Guilherme Pereira</a>
+    </p>
   </footer>
   <script src="src/js/main.js"></script>
-  <script src="src/js/inicio.js"></script>
 </body>
 </html>

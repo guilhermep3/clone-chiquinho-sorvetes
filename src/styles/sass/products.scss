@@ -1,0 +1,104 @@
+@use "variables";
+@use "mixins";
+
+#products{
+  background-color: variables.$cream;
+}
+.our-products-area {
+  @include mixins.flexCenter();
+  gap: 80px;
+  margin-top: 100px;
+
+  @include mixins.mobile() {
+    flex-direction: column;
+    gap: 72px;
+  }
+}
+
+.our-products-card {
+  position: relative;
+  display: block;
+  width: 360px;
+  height: 360px;
+  border-radius: 16px;
+  background-color: #FFAEC1;
+
+  @include mixins.mobile() {
+    width: 280px;
+    height: 280px;
+  }
+
+  .our-products-images {
+    position: absolute;
+    inset: 0;
+    padding-top: 100px;
+    pointer-events: none;
+    z-index: 1;
+
+    img {
+      position: absolute;
+      bottom: 0;
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+
+    img:nth-child(1) {
+      left: 0;
+      bottom: 10px;
+      transform: scale(1.05);
+    }
+
+    img:nth-child(2) {
+      right: 0;
+      bottom: 10px;
+      transform: scale(1.05);
+    }
+  }
+
+  &:hover {
+    .our-products-images img:nth-child(1) {
+      transform: rotate(-6deg) scale(1.10);
+      bottom: 40px;
+    }
+
+    .our-products-images img:nth-child(2) {
+      transform: rotate(6deg) scale(1.10);
+      bottom: 40px;
+    }
+  }
+
+  &.casquinhas-card {
+    background-color: variables.$yellow;
+
+    .our-products-images img:nth-child(1) {
+      left: 15%;
+    }
+
+    .our-products-images img:nth-child(2) {
+      right: 15%;
+    }
+  }
+
+  .our-products-card-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 48px;
+    background: linear-gradient(to top, #000000, transparent);
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    color: #ffffff;
+    z-index: 2;
+
+    p {
+      font-size: 36px;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    span {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}

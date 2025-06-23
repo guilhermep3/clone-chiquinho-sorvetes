@@ -34,6 +34,19 @@ body{
     font-size: 32px;
   }
 }
+.hero-title{
+  font-size: 80px;
+  color: #ffffff;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: -40px;
+  filter: drop-shadow(2px 2px 2px #555);
+
+  @include mixins.mobile(){
+    font-size: 52px
+  }
+}
 
 .buttonRed{
   @include mixins.buttonRed();
@@ -53,6 +66,7 @@ header{
 }
 header.active{
   background-color: variables.$cream;
+  box-shadow: 1px 1px 10px #00000030;
 
   .bars-mobile i{
     color: #000000;
@@ -99,6 +113,8 @@ header.active{
   }
 }
 .header-content{
+  @include mixins.flexCenter();
+  gap: 44px;
 
   nav{
     @include mixins.mobile(){
@@ -112,7 +128,7 @@ header.active{
   }
   .link-header{
     text-decoration: none;
-    color: #dfdfdf;
+    color: #f0f0f0;
     font-weight: bold;
     font-size: 18px;
     transition: all 0.2s;
@@ -123,12 +139,7 @@ header.active{
   .link-header.active{
     color: #ffffff
   }
-  @include mixins.flexCenter();
-  gap: 44px;
 
-  button{
-    @include mixins.buttonRed();
-  }
 }
 
 .mobile-aside-bg{

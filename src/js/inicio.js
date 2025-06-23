@@ -1,5 +1,11 @@
 const istagramPosts = document.querySelector('.instagram-posts');
 const allPosts = document.querySelectorAll('.ig-post');
+const video = document.getElementById("hero-video");
+const videos = [
+  "src/videos/chiquinho-video-sensorial.mp4",
+  "src/videos/chiquinho-video-modo-turbo.mp4"
+];
+let currentVideoIndex = 0;
 
 const postsLinks = [
   {
@@ -53,3 +59,20 @@ function addPosts(){
 }
 
 addPosts();
+
+function loadVideo(index) {
+  video.src = videos[index];
+  video.play();
+}
+
+document.getElementById("prev-btn").addEventListener("click", () => {
+  currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
+  loadVideo(currentVideoIndex);
+})
+
+document.getElementById("next-btn").addEventListener("click", () => {
+  currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+  loadVideo(currentVideoIndex);
+})
+
+loadVideo(currentVideoIndex);
