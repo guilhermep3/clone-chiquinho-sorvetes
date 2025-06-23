@@ -34,6 +34,13 @@ body{
     font-size: 32px;
   }
 }
+.section-desc{
+  font-size: 16px;
+  margin: 20px 0;
+  color: variables.$brown;
+  text-align: center;
+}
+
 .hero-title{
   font-size: 80px;
   color: #ffffff;
@@ -225,13 +232,13 @@ footer {
 
   ul{
     li{
-      color: #377899;
+      color: variables.$blue;
       list-style: none;
       font-size: 18px;
       margin-bottom: 8px;
       
       a{
-        color: #377899;
+        color: variables.$blue;
         text-decoration: none;
 
         &:hover{
@@ -262,12 +269,12 @@ footer {
   font-size: 18px;
   text-transform: uppercase;
   font-weight: bold;
-  color: #377899;
+  color: variables.$blue;
   margin-bottom: 20px;
 }
 .footer-social-medias{
   p {
-    color: #377899;
+    color: variables.$blue;
     margin-top: 16px;
     margin-bottom: 8px;
   }
@@ -292,4 +299,96 @@ footer {
     color: variables.$brown;
     font-weight: 500;
   }
+}
+
+
+#nutrition {
+  background-color: variables.$yellow;
+
+  .container {
+    @include mixins.flexCenter();
+    flex-direction: column;
+    gap: 40px;
+
+    @include mixins.mobile(){
+      gap: 20px;
+    }
+
+  }
+
+  .nutrition-top {
+    @include mixins.flexCenter();
+    width: 100%;
+
+    .nutrition-left {
+      @include mixins.mobile(){
+        display: none;
+      }
+
+      img {
+        width: 75%;
+      }
+    }
+
+    .nutrition-right {
+      @include mixins.mobile(){
+        display: none;
+      }
+
+      p {
+        font-size: 52px;
+        font-weight: 900;
+        color: #ffffff;
+        margin-bottom: 48px;
+      }
+
+      button {
+        width: 320px;
+        padding: 16px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .nutrition-bottom{
+
+    p{
+      font-size: 14px;
+      color: #242424;
+    }
+  }
+
+  .nutrition-top-mobile{
+    display: none;
+    @include mixins.mobile(){
+      display: block;
+    }
+    width: 100%;
+
+    div{
+      @include mixins.flexCenter();
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    img{
+      width: 100px;
+    }
+
+    p{
+      font-size: 32px;
+      font-weight: 900;
+      color: #ffffff;
+    }
+
+    button{
+      width: 100%;
+    }
+  }
+}
+
+.products-list{
+  @include mixins.flexCenter();
+  flex-wrap: wrap;
+  gap: 28px
 }

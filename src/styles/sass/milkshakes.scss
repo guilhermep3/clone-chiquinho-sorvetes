@@ -1,0 +1,21 @@
+@use "mixins";
+@use "variables";
+
+#hero {
+  @include mixins.backgroundPage();
+  background-image: url('../../images/hero/titulo-milk-shake.jpg');
+}
+
+#traditionals{
+
+  .product{
+    @include mixins.product(variables.$red);
+  }
+}
+
+#fabulous{
+  
+  .product{
+    @include mixins.product(#F08A50);
+  }
+}

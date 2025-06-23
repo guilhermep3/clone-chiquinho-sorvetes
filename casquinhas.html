@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sorveteria | Casquinhas - Clone Chiquinho</title>
   <link rel="stylesheet" href="src/styles/css/main.css">
+  <link rel="stylesheet" href="src/styles/css/casquinhas.css">
+  <link rel="stylesheet" href="src/styles/css/products.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
+
 <body>
- <header>
+  <header>
     <div class="header-container">
-      <a href="/" class="bars-mobile">
+      <div class="bars-mobile">
         <i class="fa-solid fa-bars"></i>
-      </a>
-      <div class="logo-header">
-        <img src="src/images/chiquinho-logo-horizontal.png.webp" alt="logo sorveteria">
       </div>
+      <a href="/" class="logo-header">
+        <img src="src/images/chiquinho-logo-horizontal.png.webp" alt="logo sorveteria">
+      </a>
       <div class="header-content">
         <nav>
           <ul>
@@ -44,26 +48,92 @@
   <main>
     <section id="hero">
       <div class="container">
-        
+        <h1 class="hero-title">Casquinhas</h1>
       </div>
     </section>
     <section id="traditionals">
       <div class="container">
-        
+        <div class="section-title">Tradicionais</div>
+        <div id="traditionals-list" class="products-list">
+          <!-- js -->
+        </div>
       </div>
     </section>
-    <section id="fabulous">
+    <section id="trufados">
       <div class="container">
-        
+        <div class="section-title">Trufados</div>
+        <div id="trufados-list" class="products-list">
+          <!-- js -->
+        </div>
+      </div>
+    </section>
+    <section id="products">
+      <div class="container">
+        <h1 class="section-title">Conheça nossos produtos</h1>
+        <div class="our-products-area">
+          <a href="/milkshakes.html" class="our-products-card milkshake-card">
+            <div class="our-products-images">
+              <img src="src/images/milkshake_1.webp" alt="milkshake_1">
+              <img id="milkshake_2" src="src/images/milkshake_2.webp" alt="milkshake_2">
+            </div>
+            <div class="our-products-card-text">
+              <p>Milk Shakes</p>
+              <span>Conheça +</span>
+            </div>
+          </a>
+          <a href="/casquinhas.html" class="our-products-card casquinhas-card">
+            <div class="our-products-images">
+              <img src="src/images/casquinha_1.webp" alt="casquinha_1">
+              <img src="src/images/casquinha_2.webp" alt="casquinha_2">
+            </div>
+            <div class="our-products-card-text">
+              <p>Casquinhas & Cascões</p>
+              <span>Conheça +</span>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
     <section id="nutrition">
       <div class="container">
-        
+        <div class="nutrition-top">
+          <div class="nutrition-left">
+            <img src="src/images/ico-tabela-nutricional.png.webp" alt="tabela-nutricional">
+          </div>
+          <div class="nutrition-right">
+            <p>TABELA<br />NUTRICIONAL<br />GERAL</p>
+            <button class="buttonIcon buttonRed">
+              Ver Tabela Nutricional
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+          <div class="nutrition-top-mobile">
+            <div>
+              <img src="src/images/ico-tabela-nutricional.png.webp" alt="tabela-nutricional">
+              <p>TABELA<br />NUTRICIONAL<br />GERAL</p>
+            </div>
+            <button class="buttonIcon buttonRed">
+              Ver Tabela Nutricional
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+        <div class="nutrition-bottom">
+          <p>
+            Os produtos expostos contêm glúten. Alérgicos: Devido ao contato entre ingredientes na área
+            de produção, há riscos de contaminação cruzada, em razão da transferência de contaminantes durante
+            a manipulação dos produtos. Para mais informações, consulte a tabela nutricional disponível abaixo.
+            NUTELLA® é uma marca de propriedade da Ferrero S.p.A. Ouro Branco® is a trademark of the Mondelēz
+            International Group used with permission. KitKat®, Suflair®, NEGRESCO® e Leite Moça® são marcas
+            registradas Nestlé. OVOMALTINE® é uma marca registrada da R. Twining and Company Limited. Previna
+            a obesidade infantil com a adoção de alimentação saudável e prática de atividades físicas. Imagens
+            meramente ilustrativas.
+          </p>
+        </div>
       </div>
     </section>
   </main>
-<footer>
+  <footer>
     <div class="container">
       <div class="logo-footer">
         <img src="src/images/chiquinho-logo-vertical.png.webp" alt="logo chiquinho sorvetes">
@@ -98,8 +168,11 @@
         </div>
       </div>
     </div>
-    <p class="developed">Desenvolvido por <a href="https://github.com/guilhermep3" target="_blank">Guilherme Pereira</a></p>
+    <p class="developed">Desenvolvido por <a href="https://github.com/guilhermep3" target="_blank">Guilherme Pereira</a>
+    </p>
   </footer>
   <script src="src/js/main.js"></script>
+  <script src="src/js/casquinhas.js"></script>
 </body>
+
 </html>

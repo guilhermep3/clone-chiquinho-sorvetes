@@ -1,0 +1,21 @@
+@use "mixins";
+@use "variables";
+
+#hero {
+  @include mixins.backgroundPage();
+  background-image: url('../../images/hero/titulo-casquinhas-cascoes.jpg');
+}
+
+#traditionals{
+
+  .product{
+    @include mixins.product(variables.$blue);
+  }
+}
+
+#trufados{
+  
+  .product{
+    @include mixins.product(variables.$yellow);
+  }
+}
