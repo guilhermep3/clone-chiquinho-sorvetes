@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="src/styles/css/main.css">
   <link rel="stylesheet" href="src/styles/css/historia.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -23,8 +24,8 @@
         <nav>
           <ul>
             <li><a href="/" class="link-header">Início</a></li>
-            <li><a href="/cardapio.html" class="link-header active">Cardápio</a></li>
-            <li><a href="/historia.html" class="link-header">Nossa História</a></li>
+            <li><a href="/cardapio.html" class="link-header">Cardápio</a></li>
+            <li><a href="/historia.html" class="link-header active">Nossa História</a></li>
           </ul>
         </nav>
         <button class="buttonRed">Peça aqui</button>
@@ -54,17 +55,17 @@
       <div class="container">
         <div class="timeline-image-area">
           <img class="timeline-image" src="src/images/historia/chiquinho-icone-grande.png" alt="icone sorvete">
-          <img id="balloon-1980" class="timeline-baloon"
+          <img data-aos="fade-down" id="balloon-1980" class="timeline-baloon"
             src="src/images/historia/pin_1980.png" alt="chiquinho sorvetes sorveteria">
-          <img id="balloon-1984" class="timeline-baloon"
+          <img data-aos="fade-down" id="balloon-1984" class="timeline-baloon"
             src="src/images/historia/pin_1984.png" alt="chiquinho sorvetes sorveteria">
-          <img id="balloon-2000" class="timeline-baloon"
+          <img data-aos="fade-down" id="balloon-2000" class="timeline-baloon"
             src="src/images/historia/pin_2000.png" alt="chiquinho sorvetes sorveteria">
-          <img id="balloon-2010" class="timeline-baloon"
+          <img data-aos="fade-down" id="balloon-2010" class="timeline-baloon"
             src="src/images/historia/pin_2010.png" alt="chiquinho sorvetes sorveteria">
-          <img id="balloon-2024" class="timeline-baloon"
+          <img data-aos="fade-down" id="balloon-2024" class="timeline-baloon"
             src="src/images/historia/pin_2024.png" alt="chiquinho sorvetes sorveteria">
-          <img id="balloon-2025" class="timeline-baloon"
+          <img data-aos="fade-down" id="balloon-2025" class="timeline-baloon"
             src="src/images/historia/pin_2025.png" alt="chiquinho sorvetes sorveteria">
         </div>
         <div class="timeline-texts">
@@ -210,6 +211,14 @@
     </p>
   </footer>
   <script src="src/js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      delay: 200,
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 
 </html>

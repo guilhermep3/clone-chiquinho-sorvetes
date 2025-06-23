@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="src/styles/css/cardapio.css">
   <link rel="stylesheet" href="src/styles/css/products.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -51,9 +52,9 @@
     </section>
     <section id="products">
       <div class="container">
-        <h1 class="section-title">Conheça nossos produtos</h1>
+        <h1 data-aos="fade-down" class="section-title">Conheça nossos produtos</h1>
         <div class="our-products-area">
-          <a href="/milkshakes.html" class="our-products-card milkshake-card">
+          <a data-aos="fade-down" href="/milkshakes.html" class="our-products-card milkshake-card">
             <div class="our-products-images">
               <img src="src/images/milkshake_1.webp" alt="milkshake_1">
               <img id="milkshake_2" src="src/images/milkshake_2.webp" alt="milkshake_2">
@@ -63,7 +64,7 @@
               <span>Conheça +</span>
             </div>
           </a>
-          <a href="/casquinhas.html" class="our-products-card casquinhas-card">
+          <a data-aos="fade-down" href="/casquinhas.html" class="our-products-card casquinhas-card">
             <div class="our-products-images">
               <img src="src/images/casquinha_1.webp" alt="casquinha_1">
               <img src="src/images/casquinha_2.webp" alt="casquinha_2">
@@ -154,6 +155,14 @@
     </p>
   </footer>
   <script src="src/js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      delay: 200,
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 
 </html>

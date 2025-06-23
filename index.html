@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="src/styles/css/inicio.css">
   <link rel="stylesheet" href="src/styles/css/products.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -65,30 +66,30 @@
     <section id="presentation">
       <div class="container">
         <div class="presentation-left">
-          <h1>Com sua receita exclusiva, a Chiquinho apresenta um cardápio com mais de 100 opções</h1>
-          <p>Além de contar com parcerias de excelência e ingredientes selecionados, nossos carros-chefes
+          <h1 data-aos="fade-right">Com sua receita exclusiva, a Chiquinho apresenta um cardápio com mais de 100 opções</h1>
+          <p data-aos="fade-right">Além de contar com parcerias de excelência e ingredientes selecionados, nossos carros-chefes
             se destacam, como o Top Mix e o exclusivo Shake Mix®.
           </p>
-          <span>Para mais informações, <a href="#">clique aqui</a> e confira a nossa tabela nutricional. </span>
+          <span data-aos="fade-right">Para mais informações, <a href="#">clique aqui</a> e confira a nossa tabela nutricional. </span>
         </div>
         <div class="presentation-right">
           <div class="images-presentation-area">
-            <div class="red-ball">
+            <div data-aos="flip-left" class="red-ball">
               <img id="presentation_1" src="src/images/presentation/presentation_1.webp" alt="sorvete">
             </div>
-            <img id="presentation_2" src="src/images/presentation/presentation_2.webp" alt="sorvete">
-            <img id="presentation_3" src="src/images/presentation/presentation_3.webp" alt="sorvete">
-            <img id="presentation_4" src="src/images/presentation/presentation_4.webp" alt="sorvete">
-            <img id="presentation_5" src="src/images/presentation/presentation_5.webp" alt="sorvete">
+            <img data-aos="fade-down" id="presentation_2" src="src/images/presentation/presentation_2.webp" alt="sorvete">
+            <img data-aos="fade-up" id="presentation_3" src="src/images/presentation/presentation_3.webp" alt="sorvete">
+            <img data-aos="fade-up" id="presentation_4" src="src/images/presentation/presentation_4.webp" alt="sorvete">
+            <img data-aos="fade-down" id="presentation_5" src="src/images/presentation/presentation_5.webp" alt="sorvete">
           </div>
         </div>
       </div>
     </section>
     <section id="products">
       <div class="container">
-        <h1 class="section-title">Conheça nossos produtos</h1>
+        <h1 data-aos="fade-down" class="section-title">Conheça nossos produtos</h1>
         <div class="our-products-area">
-          <a href="/milkshakes.html" class="our-products-card milkshake-card">
+          <a data-aos="zoom-in" href="/milkshakes.html" class="our-products-card milkshake-card">
             <div class="our-products-images">
               <img src="src/images/milkshake_1.webp" alt="milkshake_1">
               <img id="milkshake_2" src="src/images/milkshake_2.webp" alt="milkshake_2">
@@ -98,7 +99,7 @@
               <span>Conheça +</span>
             </div>
           </a>
-          <a href="/casquinhas.html" class="our-products-card casquinhas-card">
+          <a data-aos="zoom-in" href="/casquinhas.html" class="our-products-card casquinhas-card">
             <div class="our-products-images">
               <img src="src/images/casquinha_1.webp" alt="casquinha_1">
               <img src="src/images/casquinha_2.webp" alt="casquinha_2">
@@ -113,7 +114,7 @@
     </section>
     <section id="social-medias">
       <div class="container">
-        <h1 class="section-title">Siga a gente nas redes sociais</h1>
+        <h1 data-aos="fade-down" class="section-title">Siga a gente nas redes sociais</h1>
         <button class="buttonIcon">
           Instagram
           <i class="fa-brands fa-instagram"></i>
@@ -125,12 +126,12 @@
     </section>
     <section id="begin">
       <div class="container">
-        <div class="begin-images">
+        <div data-aos="fade-right" class="begin-images">
           <img src="src/images/sobre-a-marca-primeira-chiquinho-01.png.webp" alt="sobre chiquinho sorvetes">
           <img src="src/images/sobre-a-marca-primeira-chiquinho-02.png.webp" alt="sobre chiquinho sorvetes">
         </div>
-        <div class="begin-texts">
-          <h1 class="section-title">Tudo começou no interior de Minas Gerais, quando Francisco, o Chiquinho,
+        <div data-aos="fade-left" class="begin-texts">
+          <h1 data-aos="fade-down" class="section-title">Tudo começou no interior de Minas Gerais, quando Francisco, o Chiquinho,
             presenteou seu filho com uma pequena sorveteria.
           </h1>
           <p>O sonho era grande: espalhar felicidade em forma de sorvete. Em 2010,
@@ -185,6 +186,13 @@
   </footer>
   <script src="src/js/main.js"></script>
   <script src="src/js/inicio.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      delay: 200,
+      duration: 1000,
+    });
+  </script>
 </body>
 
 </html>
